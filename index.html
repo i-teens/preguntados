@@ -6,56 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preguntados</title>
     <link rel="stylesheet" href="index.css">
-    
 </head>
 <body>
     <div class="results" id="resluts_bg">
         <h1 class="result" id="correct">Correcto</h1>
         <h1 class="result" id="incorrect">Incorrecto</h1>
         <h1 class="result" id="timeout">¡Te quedaste sin tiempo!</h1>
-        <h1 class="result" id="math">Matemática</h1>
-        <h1 class="result" id="bio">Química</h1>
-        <h1 class="result" id="phy">Física</h1>
+        <h1 class="result" id="MATEMÁTICA">Matemática</h1>
+        <h1 class="result" id="QUÍMICA">Química</h1>
+        <h1 class="result" id="FÍSICA">Física</h1>
     </div>
-    <div class="categories">
-        <div class="category selected">Matemática</div>
-        <div class="category">Física</div>
-        <div class="category">Biología</div>
+    <div class="choose_category" id="abc">
+        <h1 class="choose_title">Elegí Categoría: </h1>
+        <div class="button_group">
+        <button class="cat_option" data-cat="MATEMÁTICA">Matemática</button>
+        <button class="cat_option" data-cat="QUÍMICA">Química</button>
+        <button class="cat_option" data-cat="FÍSICA">Física</button>
+        </div>
+    </div>
+    <div class="categories" id="roulette" onclick="roulette()">
+        AQUÍ SE MUESTRA LA CATEGORÍA
     </div>
     <div class="question">
-        <div class="title" id="title">
-            ¿Cuanto es dos más dos?
+        <div class="title" id="q-title">
+            AQUÍ SE MUESTRA LA PREGUNTA
         </div>
         <div class="time">
             <hr id="time-line">
         </div>
         <div class="options">
-            <div class="option" id="option1">
-                <div class="text">
-                    <span>2</span>
-                </div>
+            <div class="option right">
+                ASÍ SE VE UNA OPCIÓN CORRECTA
             </div>
-            <div class="option" id="option2">
-                <div class="text">
-                    <span>4</span>
-                </div>
+            <div class="option wrong">
+                ASÍ SE VE UNA OPCIÓN INCORRECTA
             </div>
-            <div class="option right" id="option3">
-                <div class="text">
-                    <span>6</span>
-                </div>
+            <div class="option">
+                OTRA OPCIÓN
             </div>
-            <div class="option wrong" id="option4">
-                <div class="text">
-                    <span>8</span>
-                </div>
+            <div class="option">
+                OTRA OPCIÓN
             </div>
     </div>
-    
+    <div class="crown">
+        <div class="crown_sec win"></div>
+        <div class="crown_sec"></div>
+        <div class="crown_sec"></div>
+        <div class="crown_sec"></div>
+        <div class="crown_sec"></div>
+        <div class="crown_sec"></div>
+        <div class="crown_sec"></div>
+    </div>
     <div class="scores">
-        <div class="score">Casa Blanca<br><span id="b_score">0</span></div>
-        <div class="score">Casa Verde<br><span id="v_score">0</span></div>
-        <div class="score">Casa Roja<br><span id="r_score">0</span></div>
+        <div class="score">Casa Blanca<br><span class="pts">0</span></div>
+        <div class="score">Casa Verde<br><span class="pts">0</span></div>
+        <div class="score">Casa Roja<br><span class="pts">0</span></div>
     </div>
 </body>
 <script src="index.js"></script>
